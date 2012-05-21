@@ -17,7 +17,7 @@
 
   $.fn.slacker = function() {
     // On scroll and resize, determine which images to load and show them
-    $(window).on('scroll resize', function() {
+    $(window).on('scroll resize ajaxComplete', function() {
       $('.l:visible').each(function() {
         if (!$.scrollVert(this) && !$.scrollHoriz(this)) {
           slackem($(this));
